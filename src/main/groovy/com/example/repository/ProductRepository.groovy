@@ -142,20 +142,20 @@ abstract class ProductRepository implements CrudRepository<Product, Integer> {
 	abstract Product update(Product product)
 	
 	/**
-	 * Update by ID
+	 * Update by ID. Update methods only support void or number based return types.
 	 * @param id
 	 * @param name
 	 * @return
 	 */
 	@Executable
-	abstract Product update(@Id Integer id, String name)
+	abstract void update(@Id Integer id, String name)
 	
 	/**
 	 * Update by name
 	 * @param name
 	 */
 	@Executable
-	abstract void updateByName(String name)
+	abstract void updateByName(String name, Boolean enabled)
 	
 	/**
 	 * Explicitly insert an object

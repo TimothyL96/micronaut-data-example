@@ -20,4 +20,7 @@ class StockingPoint {
 	
 	@OneToOne(fetch = FetchType.LAZY)
 	Period period
+	
+	@OneToMany(fetch = FetchType.LAZY)
+	List<Product> products
 }
